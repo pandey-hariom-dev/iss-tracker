@@ -8,8 +8,6 @@ def position():
     data = response.json()
     latitude = float(data['iss_position']['latitude'])
     longitude = float(data['iss_position']['longitude'])
-    location = requests.get("https://geocode.maps.co/reverse?lat=latitude&lon=longitude&api_key=6a1bb36c325c0697848568huqd5bf0b")
-    print(location)
     print(f"🛸 ISS is at: {latitude}, {longitude}")
     return latitude, longitude
 
